@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <script src="components/loader.js"></script>
+  <script src="lib/onsenui/js/onsenui.min.js"></script>
+
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/app.js"></script>
+</head>
+<body>
+    <!-- ナビゲーター -->
+    <ons-navigator page="list.html" id="navi"></ons-navigator>
+
+    <!-- 一覧画面 -->
+    <ons-template id="list.html">
+        <ons-page id="list-page">
+            <ons-toolbar>
+                <div class="center">一覧画面</div>
+                <div class="right">
+                    <ons-toolbar-button class="add-btn">
+                        <ons-icon icon="fa-plus-circle"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+            </ons-toolbar>
+
+            <ons-list class="item-list">
+                <ons-list-item modifier="chevron" class="item">
+                    <ons-row>
+                        <ons-col>
+                            <header>
+                                <span class="item-title"></span>
+                            </header>
+                            <p class="item-desc"></p>
+                        </ons-col>
+                    </ons-row>
+                </ons-list-item>
+
+                <ons-list-item modifier="chevron" class="item">
+                    <ons-row>
+                        <ons-col>
+                            <header>
+                                <span class="item-title"></span>
+                            </header>
+                            <p class="item-desc"></p>
+                        </ons-col>
+                    </ons-row>
+                </ons-list-item>
+
+                <ons-list-item modifier="chevron" class="item">
+                    <ons-row>
+                        <ons-col>
+                            <header>
+                                <span class="item-title"></span>
+                            </header>
+                            <p class="item-desc"></p>
+                        </ons-col>
+                    </ons-row>
+                </ons-list-item>
+
+            </ons-list>
+
+        </ons-page>
+    </ons-template>
+
+    <!-- 登録画面 -->
+    <ons-template id="new.html">
+        <ons-page id="new-page">
+
+            <ons-toolbar>
+                <div class="left"><ons-back-button>Back</ons-back-button></div>
+                <div class="center">登録画面</div>
+            </ons-toolbar>
+    
+			<div class="photo">
+				<img id="small-image">
+            </div>
+            
+            <div class="buttons">
+            	<ons-button id="photo-btn" modifier="large">
+                    写真を撮る
+                </ons-button>
+                <ons-button id="add-save-btn" modifier="large" disabled>
+                    登録
+                </ons-button>
+            </div>
+
+        </ons-page>
+    </ons-template>
+
+    <!-- 詳細画面 -->
+    <ons-template id="detail.html">
+        <ons-page id="detail-page">
+
+            <ons-toolbar>
+                <div class="left"><ons-back-button>Back</ons-back-button></div>
+                <div class="center">詳細画面</div>
+                <div class="right">
+                    <ons-toolbar-button class="del-btn">
+                        <ons-icon icon="ion-trash-b" size="28px"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+            </ons-toolbar>
+
+			<div class="photo">
+				<img id="small-image">
+            </div>
+            
+            <ons-alert-dialog id="dialog">
+              <div class="alert-dialog-title">確認</div>
+              <div class="alert-dialog-content">
+                この画像を削除してよろしいですか？
+              </div>
+              <div class="alert-dialog-footer">
+                <button class="alert-dialog-button" id="cancel-dialog-button">Cancel</button>
+                <button class="alert-dialog-button" id="ok-dialog-button">OK</button>
+              </div>
+            </ons-alert-dialog>
+        </ons-page>
+    </ons-template>
+
+    <!-- リスト内要素のテンプレート -->
+    <div id="list-item-template">
+        <ons-list-item modifier="chevron" class="item">
+            <ons-row>
+                <ons-col>
+                    <header>
+                        <span class="item-date"></span>
+                    </header>
+                    <p class="item-location"></p>
+                </ons-col>
+            </ons-row>
+        </ons-list-item>
+    </div>
+    
+</body>
+
+</html>
